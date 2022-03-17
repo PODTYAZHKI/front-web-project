@@ -1,5 +1,15 @@
 <template>
   <div>
+    <v-breadcrumbs></v-breadcrumbs>
+    <section class="section section-header text-dark pb-md-8">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-10 text-center mb-5 mb-md-7">
+              <h1 class="display-2 font-weight-bolder mb-4">Сочинение войне</h1>
+            </div>
+          </div>
+        </div>
+      </section>
     <p>
       Война – это самое страшное, что может случиться в жизни каждого человека.
       Внезапное нападение фашисткой Германии на простых советских людей. Но

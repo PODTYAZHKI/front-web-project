@@ -15,7 +15,7 @@
           <div class="col-12 col-md-10 justify-content-center">
             <img
               class="d-none d-md-inline-block"
-              src="./assets/img/illustrations/scene.svg"
+              src="./assets/img/illustrations/scene-2.svg"
               alt="Mobile App Mockup"
             />
           </div>
