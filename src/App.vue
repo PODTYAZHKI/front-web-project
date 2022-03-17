@@ -23,3 +23,10 @@ export default {
   data: () => ({}),
 };
 </script>
+
+<style>
+p {
+  text-align: justify;
+}
+</style>
+>

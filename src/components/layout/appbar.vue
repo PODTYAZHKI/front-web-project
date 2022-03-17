@@ -9,18 +9,26 @@
       dark
     >
       <v-list nav color="primary">
-        <v-list-item
-          v-for="(item, i) in btnItems"
-          :key="i"
-          link
-          :to="item.to"
-          :href="item.href"
-          :target="item.target"
-        >
-          <v-list-item-content>
-            <v-list-item-title>{{ item.text }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+        <!-- <v-list-item>
+          <v-menu transition="slide-y-transition" bottom open-on-hover>
+            <template v-slot:activator="{ on, attrs }">
+              <a href="" class="navbar-item" dark v-bind="attrs" v-on="on">
+                Интелектуальные функции
+              </a>
+            </template>
+            <v-list>
+              <v-list-item v-for="(item, i) in featuresList" :key="i">
+                <router-link
+                  :to="item.to"
+                  v-show="!item.onlyLoggedIn || $store.state.loggedIn"
+                  class="navbar-item"
+                  exact-active-class="is-active"
+                  >{{ item.label }}</router-link
+                >
+              </v-list-item>
+            </v-list>
+          </v-menu>
+        </v-list-item> -->
         <v-list-item
           v-for="(item, i) in barItems"
           :key="i"
@@ -66,10 +74,7 @@
             </v-toolbar-title>
           </v-col>
 
-          <v-col
-            v-if="$vuetify.breakpoint.smAndUp"
-            class="d-flex align-center"
-          >
+          <v-col v-if="$vuetify.breakpoint.smAndUp" class="d-flex align-center">
             <v-btn
               v-for="(item, i) in barItems"
               :key="i"
@@ -83,7 +88,7 @@
           </v-col>
 
           <v-col class="text-right" v-if="$vuetify.breakpoint.smAndUp">
-            <v-btn
+            <!-- <v-btn
               v-for="(item, i) in btnItems"
               :key="i"
               :outlined="item.outlined"
@@ -95,7 +100,7 @@
             >
               <v-icon left>{{ item.icon }}</v-icon>
               {{ item.text }}
-            </v-btn>
+            </v-btn> -->
           </v-col>
         </v-row>
       </v-container>
@@ -107,16 +112,20 @@
 export default {
   data: () => ({
     drawer: null,
-    btnItems: [
-      {
-        text: "Войти",
+    // btnItems: [
+    //   {
+    //     text: "Войти",
 
-        target: "_black",
-        color: "primary",
-        icon: "mdi-account",
-      },
-    ],
+    //     target: "_black",
+    //     color: "primary",
+    //     icon: "mdi-account",
+    //   },
+    // ],
     barItems: [
+      {
+        to: "/features",
+        title: "Функции",
+      },
       {
         to: "/examples",
         title: "Примеры",
@@ -125,10 +134,11 @@ export default {
         to: "/ivents",
         title: "Ивенты",
       },
-      {
-        to: "/reviews",
-        title: "Отзывы",
-      },
+      
+      // {
+      //   to: "/reviews",
+      //   title: "Отзывы",
+      // },
     ],
   }),
 };

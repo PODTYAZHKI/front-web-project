@@ -7,7 +7,7 @@
           <div class="row justify-content-center">
             <div class="col-12 col-md-10 text-center mb-5 mb-md-7">
               <h1 class="display-2 font-weight-bolder mb-4">АнтиТокс</h1>
-              <p class="lead mb-4 mb-lg-5">
+              <p class="lead mb-4 mb-lg-5" style="text-align: justify; !important">
                 Текст - это также часть нашей культуры. И мы готовы помочь вам
                 сделать его чистым от токсичности.
               </p>
