@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '../views/IndexPage.vue'
 
 Vue.use(VueRouter)
 
@@ -11,17 +11,75 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/category',
+    name: 'Category',
+    component: () => import("@/views/Category.vue"),
+  },
+  {
+    path: '/detail/:postId',
+    name: 'Detail',
+    component: () => import("@/views/Detail.vue"),
+    
+  },
+  {
+    path: '/ivents',
+    name: 'Ivents',
+    component: () => import("@/views/Ivents.vue"),
+  },
+  {
+    path: '/authors',
+    name: 'Authors',
+    component: () => import("@/views/Authors.vue"),
+  },
+  {
+    path: '/author/:authorId',
+    name: 'AutorProfile',
+    component: () => import("@/views/AuthorProfile.vue"),
+  },
+  {
+    path: '/features/toxicity',
+    name: 'toxicity',
+    // component: () => import("@/views/AuthorProfile.vue"),
+  },
+  {
+    path: '/features/use',
+    name: 'use',
+    // component: () => import("@/views/AuthorProfile.vue"),
+  },
+  {
+    path: '/features/qna',
+    name: 'qna',
+    // component: () => import("@/views/AuthorProfile.vue"),
+  },
+  {
+    path: '/ivents',
+    name: 'ivents',
+    component: () => import("@/views/Ivents.vue"),
+  },
+
+  {
+    path: '/ivents/dictation',
+    name: 'dictation',
+    component: () => import("@/views/Ivent_dictation.vue"),
+  },
+  {
+    path: '/ivents/conference',
+    name: 'conference',
+    component: () => import("@/views/Ivent_conference.vue"),
+  },
+  {
+    path: '/ivents/bear',
+    name: 'bear',
+    component: () => import("@/views/Ivent_bear.vue"),
   }
+
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  scrollBehavior() {
+    document.getElementById('app').scrollIntoView();
+  }
 })
 
 export default router
