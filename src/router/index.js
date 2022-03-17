@@ -39,22 +39,17 @@ const routes = [
   {
     path: '/features/toxicity',
     name: 'toxicity',
-    // component: () => import("@/views/AuthorProfile.vue"),
+    component: () => import("@/views/ToxicityPage.vue"),
   },
   {
     path: '/features/use',
     name: 'use',
-    // component: () => import("@/views/AuthorProfile.vue"),
-  },
-  {
-    path: '/features',
-    name: 'features',
-    component: () => import("@/views/Features.vue"),
+    component: () => import("@/views/UsePage.vue"),
   },
   {
     path: '/features/qna',
     name: 'qna',
-    // component: () => import("@/views/AuthorProfile.vue"),
+    component: () => import("@/views/QnaPage.vue"),
   },
   {
     path: '/ivents',
@@ -76,26 +71,6 @@ const routes = [
     path: '/ivents/bear',
     name: 'bear',
     component: () => import("@/views/Ivent_bear.vue"),
-  },
-  {
-    path: '/examples',
-    name: 'examples',
-    component: () => import("@/views/Examples.vue"),
-  },
-  {
-    path: '/examples/father',
-    name: 'father',
-    component: () => import("@/views/Example_father.vue"),
-  },
-  {
-    path: '/examples/love',
-    name: 'love',
-    component: () => import("@/views/Example_love.vue"),
-  },
-  {
-    path: '/examples/war',
-    name: 'war',
-    component: () => import("@/views/Example_war.vue"),
   }
 
 ]
