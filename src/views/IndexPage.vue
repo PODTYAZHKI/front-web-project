@@ -157,8 +157,7 @@
                 <div class="card-body">
                   <h2 class="display-2 mb-2">20k+</h2>
                   <span
-                    >Extension installs from the two major mobile app
-                    stores.</span
+                    >Пользователей по всему миру</span
                   >
                 </div>
               </div>
