@@ -8,7 +8,8 @@ const ApiLink = "https://translate.api.cloud.yandex.net/translate/v2/translate"
 const folderId = "b1goiou8tkto0joul46k"
 const headers = {
   'Content-Type': 'application/json',
-  'Authorization': 'Bearer ' + key
+  "Access-Control-Allow-Origin": "*",
+  'Authorization': 'Bearer ' + key,
 }
 const axios = require('axios')
 const toxicity = require('@tensorflow-models/toxicity');
@@ -34,10 +35,10 @@ export default {
         })
     },
     toxicity() {
-      const sentences = ['Привет тупое еблище'];
+      var sentences = ["Привет тупое еблище"];
       const threshold = 0.9;
       toxicity.load(threshold).then(model => {
-        this.getTranslate(sentences)
+        this.getTranslate(sentences[0].split(" "))
         model.classify(sentences).then(predictions => {console.log(predictions);});
       });
     }
