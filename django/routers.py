@@ -14,7 +14,7 @@ routes.register(r'auth/refresh', RefreshViewSet, basename='auth-refresh')
 routes.register(r'user', UserViewSet, basename='user')
 
 # YANDEX API
-routes.register(r'api', API, basename='translate')
+routes.register(r'translate', API, basename='translate')
 
 urlpatterns = [
     *routes.urls
