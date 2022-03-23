@@ -54,6 +54,7 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 // import key from "../../key.txt";
 // const ApiLink = "https://translate.api.cloud.yandex.net/translate/v2/translate";
 // const folderId = "b1goiou8tkto0joul46k";
@@ -63,6 +64,18 @@
 // };
 // const axios = require("axios");
 const toxicity = require("@tensorflow-models/toxicity");
+=======
+import key from '../../key.txt'
+const ApiLink = "https://translate.api.cloud.yandex.net/translate/v2/translate"
+const folderId = "b1goiou8tkto0joul46k"
+const headers = {
+  'Content-Type': 'application/json',
+  "Access-Control-Allow-Origin": "*",
+  'Authorization': 'Bearer ' + key,
+}
+const axios = require('axios')
+const toxicity = require('@tensorflow-models/toxicity');
+>>>>>>> dd6869dca4db9bfefe366e3242bfef2c2b0e84ff
 export default {
   data() {
     return {
@@ -107,6 +120,7 @@ export default {
     //     });
     // },
     toxicity() {
+
       const sentences = this.toxicity_text;
       const threshold = 0.8;
       toxicity.load(threshold).then((model) => {

@@ -1,7 +1,7 @@
 from rest_framework.routers import SimpleRouter
 from users.views import UserViewSet
 from auth.views import LoginViewSet, RegistrationViewSet, RefreshViewSet
-
+from APIViewset import API
 
 routes = SimpleRouter()
 
@@ -13,6 +13,8 @@ routes.register(r'auth/refresh', RefreshViewSet, basename='auth-refresh')
 # USER
 routes.register(r'user', UserViewSet, basename='user')
 
+# YANDEX API
+routes.register(r'translate', API, basename='translate')
 
 urlpatterns = [
     *routes.urls
